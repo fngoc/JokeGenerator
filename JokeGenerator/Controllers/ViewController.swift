@@ -31,8 +31,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var reloadJokeButton: UIButton!
     @IBOutlet weak var showPunchlineButton: UIButton!
     
+    private var alertPresenter: AlertPresenterProtocol?
+    private var networkClient: NetworkClient?
+    private var punchline: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.alertPresenter = AlertPresenter(delegate: self)
+        self.networkClient = NetworkClient(delegate: self)
+        networkClient?.loadJoke()
         
         // First stack config
         jokeIdStackView.isLayoutMarginsRelativeArrangement = true
@@ -71,14 +79,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func showPunchlineAction(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Punchline",
-                                       message: "For fowl play",
-                                       preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok",
-                                   style: .default)
-        
-        alert.addAction(action)
-        super.present(alert, animated: true)
+        alertPresenter?.showAlert(model: AlertModel(
+            title: "Punchline",
+            message: self.punchline!) { [weak self] in
+                guard let self = self else { return }
+                self.networkClient?.loadJoke()
+            }
+        )
     }
 }
 
+extension ViewController: AlertPresenterDelegate {
+}
+
+extension ViewController: NetworkDelegate {
+    
+    func setJoke(setup: String, punchline: String) {
+        self.jokeTextLabel.text = setup
+        self.punchline = punchline
+    }
+}

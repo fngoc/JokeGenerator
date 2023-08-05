@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C65E66862A7979D2005C0082 /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E66852A7979D2005C0082 /* AlertPresenterProtocol.swift */; };
+		C65E668A2A797A6B005C0082 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E66892A797A6B005C0082 /* AlertModel.swift */; };
+		C65E668C2A797AE1005C0082 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E668B2A797AE1005C0082 /* JokeModel.swift */; };
+		C65E668E2A797B45005C0082 /* AlertPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E668D2A797B45005C0082 /* AlertPresenterDelegate.swift */; };
+		C65E66922A797BA8005C0082 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E66912A797BA8005C0082 /* AlertPresenter.swift */; };
+		C65E66942A797E72005C0082 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E66932A797E72005C0082 /* NetworkClient.swift */; };
+		C65E66962A7982D5005C0082 /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E66952A7982D5005C0082 /* NetworkDelegate.swift */; };
 		C6DAD13C2A516D9F00D5FDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAD13B2A516D9F00D5FDAB /* AppDelegate.swift */; };
 		C6DAD13E2A516D9F00D5FDAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAD13D2A516D9F00D5FDAB /* SceneDelegate.swift */; };
 		C6DAD1402A516D9F00D5FDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAD13F2A516D9F00D5FDAB /* ViewController.swift */; };
@@ -48,6 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C65E66852A7979D2005C0082 /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
+		C65E66892A797A6B005C0082 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		C65E668B2A797AE1005C0082 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		C65E668D2A797B45005C0082 /* AlertPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterDelegate.swift; sourceTree = "<group>"; };
+		C65E66912A797BA8005C0082 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		C65E66932A797E72005C0082 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		C65E66952A7982D5005C0082 /* NetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
 		C6DAD1382A516D9F00D5FDAB /* JokeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DAD13B2A516D9F00D5FDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6DAD13D2A516D9F00D5FDAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +114,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C65E66842A797959005C0082 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C65E66872A7979D7005C0082 /* Delegates */,
+				C65E66852A7979D2005C0082 /* AlertPresenterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C65E66872A7979D7005C0082 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C65E668D2A797B45005C0082 /* AlertPresenterDelegate.swift */,
+				C65E66952A7982D5005C0082 /* NetworkDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C65E66882A797A5F005C0082 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C65E66892A797A6B005C0082 /* AlertModel.swift */,
+				C65E668B2A797AE1005C0082 /* JokeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C65E668F2A797B65005C0082 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAD13F2A516D9F00D5FDAB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C65E66902A797B96005C0082 /* Sercices */ = {
+			isa = PBXGroup;
+			children = (
+				C65E66912A797BA8005C0082 /* AlertPresenter.swift */,
+				C65E66932A797E72005C0082 /* NetworkClient.swift */,
+			);
+			path = Sercices;
+			sourceTree = "<group>";
+		};
 		C6DAD12F2A516D9E00D5FDAB = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +181,12 @@
 		C6DAD13A2A516D9F00D5FDAB /* JokeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				C65E66842A797959005C0082 /* Protocols */,
+				C65E66882A797A5F005C0082 /* Models */,
+				C65E66902A797B96005C0082 /* Sercices */,
+				C65E668F2A797B65005C0082 /* Controllers */,
 				C6DAD13B2A516D9F00D5FDAB /* AppDelegate.swift */,
 				C6DAD13D2A516D9F00D5FDAB /* SceneDelegate.swift */,
-				C6DAD13F2A516D9F00D5FDAB /* ViewController.swift */,
 				C6DAD16B2A517E1C00D5FDAB /* Resources */,
 			);
 			path = JokeGenerator;
@@ -330,9 +391,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65E66862A7979D2005C0082 /* AlertPresenterProtocol.swift in Sources */,
 				C6DAD1402A516D9F00D5FDAB /* ViewController.swift in Sources */,
+				C65E668C2A797AE1005C0082 /* JokeModel.swift in Sources */,
+				C65E668E2A797B45005C0082 /* AlertPresenterDelegate.swift in Sources */,
 				C6DAD13C2A516D9F00D5FDAB /* AppDelegate.swift in Sources */,
+				C65E66962A7982D5005C0082 /* NetworkDelegate.swift in Sources */,
+				C65E66942A797E72005C0082 /* NetworkClient.swift in Sources */,
+				C65E668A2A797A6B005C0082 /* AlertModel.swift in Sources */,
 				C6DAD13E2A516D9F00D5FDAB /* SceneDelegate.swift in Sources */,
+				C65E66922A797BA8005C0082 /* AlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
